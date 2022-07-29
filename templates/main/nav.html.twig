@@ -1,0 +1,12 @@
+<nav class="header-nav">
+    <a href="{{ path('main_home') }}" title="Retour à la page d'accueil">Accueil</a>
+    <a href="{{ path('main_about_us') }}" title="A propos">A propos</a>
+    <a href="{{ path('wish_list') }}" title="Liste des idées">Liste des idées</a>
+    {% if app.user %}
+        <a href="{{ path('wish_add_wish') }}" title="Ajouter idée">Ajouter idée</a>
+        <a href="{{ path('app_logout') }}" title="Logout">Logout ({{ app.user.userIdentifier }})</a></li>
+    {% else %}
+        <a href="{{ path('app_login') }}" title="Se connecter">Se connecter</a>
+        <a href="{{ path('app_register') }}" title="Créer un compte">Créer un compte</a></li>
+    {% endif %}
+</nav>

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ parent() }} | Detail de l'idée
+{% endblock %}
+
+{% block body %}
+    <h2>{{ detail.title }} [{{ detail.category.name }}]</h2>
+    <p class="wish-credit">Crée par {{ detail.author }} le {{ detail.dateCreated | date('Y-m-d') }}</p>
+    <br>
+    <div>Description : {{ detail.description | nl2br }}</div>
+{% endblock %}
+

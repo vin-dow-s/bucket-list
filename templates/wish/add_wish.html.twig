@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | Ajout idée
+{% endblock %}
+
+{% block body %}
+    <h2>Ajouter une idée :</h2>
+    <div>
+        {{ form_start(wishForm) }}
+        {{ form_widget(wishForm) }}
+        <br>
+        <button>Ajouter</button>
+        {{ form_end(wishForm) }}
+    </div>
+{% endblock %}
+
